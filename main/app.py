@@ -107,7 +107,7 @@ def send_html_email(to: str, subject: str, html_body: str) -> Dict[str, str]:
     """Send out an email with the given subject and HTML body"""
     try:
         sg = sendgrid.SendGridAPIClient(api_key=os.environ.get("SENDGRID_API_KEY"))
-        from_email = Email("jaspaltsingh@gmail.com")
+        from_email = Email("deepikamanojsharma84@gmail.com")
         to_email = To(to)
         content = Content("text/html", html_body)
         mail = Mail(from_email, to_email, subject, content).get()
